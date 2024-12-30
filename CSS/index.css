@@ -223,7 +223,7 @@ main {
 }
 
 .pimg img {
-    width: 25.5rem;
+    width: 25.9rem;
     height: 35rem;
     object-fit: cover;
     transition: transform 0.3s ease-in-out; 
@@ -521,6 +521,11 @@ main {
     border-radius: 30%;
     font-size: 1.1rem;
     color: #fff;
+}
+
+.social i:hover {
+    color: #000;
+    background-color: #fff;
 }
 
 .dsn {
