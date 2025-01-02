@@ -20,6 +20,68 @@ window.onload = function() {
 };
 
 
+// Scroll
+
+const clientImgContainer = document.querySelector('.clientimg');
+const leftButton = document.querySelector('.scroll-btn.left');
+const rightButton = document.querySelector('.scroll-btn.right');
+
+let scrollPosition = 0; 
+const scrollAmount = 200; 
+const animationDuration = 60 * 1000; 
+let autoScrollTimeout;
+let isAutoScrolling = true;
+
+
+clientImgContainer.innerHTML += clientImgContainer.innerHTML;
+
+
+function autoScroll() {
+    isAutoScrolling = true;
+    clientImgContainer.style.animation = `autoScroll ${animationDuration / 1000}s linear infinite`;
+}
+
+
+function stopAutoScroll() {
+    isAutoScrolling = false;
+    clientImgContainer.style.animation = 'none'; 
+    clearTimeout(autoScrollTimeout);
+}
+
+
+function updateScrollPosition() {
+    clientImgContainer.style.transform = `translateX(${scrollPosition}px)`;
+}
+
+
+leftButton.addEventListener('click', () => {
+    stopAutoScroll();
+    scrollPosition += scrollAmount;
+    if (scrollPosition > 0) {
+        scrollPosition = -clientImgContainer.scrollWidth / 2;
+    }
+    updateScrollPosition();
+    autoScrollTimeout = setTimeout(autoScroll, 2000);
+});
+
+
+rightButton.addEventListener('click', () => {
+    stopAutoScroll();
+    scrollPosition -= scrollAmount;
+    if (scrollPosition < -clientImgContainer.scrollWidth / 2) {
+        scrollPosition = 0;
+    }
+    updateScrollPosition();
+    autoScrollTimeout = setTimeout(autoScroll, 2000);
+});
+
+
+autoScroll();
+
+
+
+
+
 // NEXT
 
 // Get elements 
