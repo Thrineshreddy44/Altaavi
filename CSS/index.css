@@ -188,6 +188,37 @@ main {
     margin: 2rem 0 0 -2rem;
 }
 
+/* 360 */
+
+
+svg {
+    background-color: #e8e8e8; 
+    display: block;
+}
+
+.info2 .text{
+    color: #ff004f;
+}
+
+.rotate-text {
+    animation: rotateText 15s linear infinite;
+    transform-origin: 150px 150px;
+}
+
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
 .info3 {
 
     padding-top: 2rem;
@@ -873,4 +904,3 @@ body {
     color: #7A8800;
     margin-right: 5px;
 }
-
