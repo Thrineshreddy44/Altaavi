@@ -36,7 +36,7 @@ body {
 /* Splash End */
 
 header {
-    background-color: #4ca8a1;
+    background-color: #f4f4f4;
     height: 8rem;
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@ header {
 
 .dropdown > a {
     text-decoration: none;
-    color: #000000;
+    color: #000;
     display: inline-block;
 }
 
@@ -96,7 +96,7 @@ header {
 
 
 .logo img {
-    width: 10rem;
+    width: 13rem;
     margin-left: 2.5rem;
 }
 
@@ -110,13 +110,13 @@ nav ul {
 }
 
 nav a {
-    color: #000000;
+    color: #000;
     font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #fff;
+    color: #ff004f;
     font-size: 1rem;
 }
 
@@ -150,7 +150,7 @@ main {
     height: 30rem;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    flex-basis: 60%;
+    flex-basis: 50%;
     margin: 2rem 0 0 5rem;
     border: 2px solid rgb(45, 45, 45);
     border-radius: 8px;
@@ -633,6 +633,56 @@ svg {
 .details textarea {
     width: 35rem;
     margin: 2rem 0;
+}
+
+.quick {
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: row;
+    color: #004D4D;
+    justify-content: space-evenly;
+    border-top: 2px solid #000;
+}
+
+.quick h2 {
+    padding: 1rem;
+    color: #ff004f;
+}
+
+.links a{
+    display: flex;
+    flex-direction: column;
+    color: #004D4D;
+    line-height: 2;
+    margin-left: 1.2rem;
+}
+
+.links a:hover {
+    color: #ff004f;
+}
+
+.contact2 p{
+    line-height: 2;
+    margin-left: 1.1rem;
+}
+
+.quick .links .business-divisions {
+    margin-bottom: 10px;
+}
+
+.quick .links .sub-divisions {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.map img {
+    height: 9rem;
+    margin-left: 1rem;
+}
+
+.map img:hover {
+    height: 9.1rem;
+    border: 1px solid #ff004f;
 }
 
 .social {
