@@ -54,7 +54,6 @@ header {
 
 
 .dropdown > a {
-    text-decoration: none;
     color: #000;
     display: inline-block;
 }
@@ -83,7 +82,6 @@ header {
 
 .dropdown-menu li a {
     color: #fff;
-    text-decoration: none;
     padding: .6rem;
     display: block;
     flex-direction: row;
@@ -122,7 +120,7 @@ nav a:hover {
 
 
 main {
-    background-color: #e8e8e8;
+    background-color: #F2F0EA ;
     height: 100vh;
 }
 
@@ -266,7 +264,7 @@ svg {
 }
 
 .pimg img {
-    width: 25.9rem;
+    width: 100%;
     height: 35rem;
     object-fit: cover;
     transition: transform 0.3s ease-in-out; 
@@ -317,22 +315,10 @@ svg {
 
 .info4 h2 {
     font-size: 1.8rem;
-    color: #7A8800;
+    color: #ff004f;
     font-weight: bold;
     margin:0 0 1.2rem 2.1rem;
     position: relative;
-}
-  
-.info4 h2:after {
-    content: "";
-    display: block;
-    width: 10%; 
-    height: 4px;
-    background-color: #7A8800; 
-    position: absolute;
-    bottom: -1rem;
-    left: 2.9rem;
-    transform: translateX(-50%);
 }
   
 .info4 p {
@@ -373,7 +359,7 @@ svg {
     font-size: 1.8rem;
     padding: .9rem;
     color: #fff;
-    background-color: #7A8800;
+    background-color: #ff004f;
     border-radius: 50%;
     margin-right: .5rem; 
 }
@@ -392,12 +378,12 @@ svg {
     gap: 5rem;
     padding: 2rem 0;
     position: relative;
-    width: 100%; /* Full width */
-    margin: 0; /* Remove default margins */
+    width: 100%; 
+    margin: 0; 
 }
 
 .ourc p {
-    color: #7A8800;
+    color: #ff004f;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -473,7 +459,7 @@ svg {
     justify-content: center;
     gap: 2rem;
     background-color: #e8e8e8;
-    padding: 8rem 2rem;
+    padding: 3rem 2rem;
 }
 
 .polyimg img {
@@ -487,7 +473,7 @@ svg {
 }
 
 .pmatter h2 {
-    color: #7A8800;
+    color: #b13366;
     font-size: 2rem;
     margin-top: -.2rem;
 }
@@ -500,13 +486,6 @@ svg {
     text-align: justify;
     line-height: 2;
     padding-bottom: 1.4rem;
-}
-
-.pmatter a {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border: 1px solid #7A8800;
-    color: #000000;
 }
 
 .info6 {
@@ -538,12 +517,12 @@ svg {
     font-size: 1.2rem;
     background: transparent;
     color: rgb(0, 0, 0);
-    border: 1px solid #7A8800;
+    border: 1px solid #ff004f;
 }
 
 .matter button:hover {
     color: #292929;
-    background-color: #7A8800;
+    background-color: #ff004f;
     font-weight: 600;
 }
 
@@ -594,7 +573,7 @@ svg {
     background-color: #e8e8e8;
     padding: .8rem;
     margin-top: 1rem;
-    border: 2px solid #7A8800;
+    border: 2px solid #ff004f;
     border-radius: 2rem;
 }
 
@@ -609,13 +588,13 @@ svg {
     font-size: 1.2rem;
     background: transparent;
     color: rgb(0, 0, 0);
-    border: 1px solid #7A8800;
+    border: 1px solid #ff004f;
     cursor: pointer;
 }
 
 .button-group button:hover {
     color: #292929;
-    background-color: #7A8800;
+    background-color: #ff004f   ;
     font-weight: 600;
 }
 
@@ -635,13 +614,31 @@ svg {
     margin: 2rem 0;
 }
 
+.almat img{
+    width: 14rem;
+    margin: 1rem 0;
+    margin-left: -2rem;
+}
+
+.almat p {
+    width: 18rem;
+    margin-left: -1.5rem;
+    text-align: justify;
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
+u {
+    margin-top: .5rem;
+}
+
 .quick {
-    background-color: #e8e8e8;
+    background-color: #3a3a3a;
+    font-size: .9rem;
     display: flex;
     flex-direction: row;
-    color: #004D4D;
+    color: #ffffff;
     justify-content: space-evenly;
-    border-top: 2px solid #000;
 }
 
 .quick h2 {
@@ -652,13 +649,18 @@ svg {
 .links a{
     display: flex;
     flex-direction: column;
-    color: #004D4D;
+    color: #ffffff;
     line-height: 2;
     margin-left: 1.2rem;
 }
 
 .links a:hover {
     color: #ff004f;
+}
+
+.lp {
+    line-height: 2;
+    margin-left: 1rem;
 }
 
 .contact2 p{
@@ -676,17 +678,18 @@ svg {
 }
 
 .map img {
-    height: 9rem;
+    height: 7rem;
+    margin: 1rem 0;
     margin-left: 1rem;
 }
 
 .map img:hover {
-    height: 9.1rem;
+    height: 7.1rem;
     border: 1px solid #ff004f;
 }
 
 .social {
-    background-color: #e8e8e8;
+    background-color: #3a3a3a;
     gap: 0.2rem;
     display: flex;
     justify-content: flex-end;
@@ -695,22 +698,23 @@ svg {
 
 .social i {
     padding: 0.4rem;
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     border-radius: 30%;
     font-size: 1.1rem;
-    color: #000000;
+    color: #ff004f;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social i:hover {
     transform: translateY(-0.5rem);
     color: #ffffff;
-    background-color: #000000;
+    background-color: #ff004f;
 }
 
 .dsn {
     display: flex;
-    height: 4rem;
+    font-size: .7rem;
+    height: 2.5rem;
     background-color: #292929;
     color: #fff;
     justify-content: center;
@@ -733,21 +737,9 @@ svg {
 .about h2 {
     padding: 1rem;
     font-size: 1.8rem;
-    color: #7A8800;
+    color: #ff004f;
     font-weight: bold;
     position: relative;
-}
-  
-.about h2:after {
-    content: "";
-    display: block;
-    width: 5%; 
-    height: 4px;
-    background-color: #7A8800; 
-    position: absolute;
-    bottom: -.3rem;
-    left: 3rem;
-    transform: translateX(-50%);
 }
 
 /* Form */
@@ -758,6 +750,7 @@ svg {
     align-items: center;
     flex-direction: column;
     background-color: #e8e8e8;
+    padding-bottom: 1rem;
 }
 
 .ud p {
@@ -771,7 +764,7 @@ svg {
     padding: 1rem;
     font-size: 1rem;
     color: #000;
-    border: 2px solid #7A8800;
+    border: 2px solid #ff004f;
     border-radius: 1rem;
 }
 
@@ -785,13 +778,14 @@ svg {
     background-color:#e8e8e8;
     padding: 2rem;
     display: flex;
+    gap: 3rem;
     text-align: justify;
 }
 
 .mep h2{
     padding: 1rem 0;
     font-size: 1.8rem;
-    color: #7A8800;
+    color: #ff004f;
     font-weight: bold;
     position: relative;
 }
@@ -808,7 +802,8 @@ svg {
 .mepimg img {
     width: 22rem;
     padding: 1rem;
-    margin-right: 3rem;
+    padding-bottom: 2rem;
+    margin-right: -4rem;
 }
 
 body {
@@ -838,7 +833,7 @@ body {
 .man h2 {
     padding: 1rem 0;
     font-size: 1.8rem;
-    color: #7A8800;
+    color: #ff004f;
     font-weight: bold;
     position: relative;
 }
@@ -862,11 +857,23 @@ body {
     background-color: #e8e8e8;
 }
 
+.siteimg {
+    display: flex;
+    gap: 10rem;
+}
+
+.projimg img{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    padding: 2rem;
+}
+
 .proj h2 {
     padding: 1rem 0;
     margin-left: 2rem;
     font-size: 1.8rem;
-    color: #7A8800;
+    color: #ff004f;
     font-weight: bold;
     position: relative;
 }
@@ -954,3 +961,4 @@ body {
     color: #7A8800;
     margin-right: 5px;
 }
+
