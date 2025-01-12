@@ -2,7 +2,6 @@
     font-family: 'Lora', serif, Verdana, Geneva, Tahoma;
     margin: 0;
     padding: 0;
-    /* list-style: none; */
     text-decoration: none;
     scroll-behavior: smooth;
 }
@@ -11,6 +10,7 @@
 
 body {
     overflow: hidden;
+    background-color: #637c7f;
 }
 
 #splash-screen {
@@ -120,7 +120,7 @@ nav a:hover {
 
 
 main {
-    background-color: #F2F0EA ;
+    background-color: #637c7f ;
     height: 100vh;
 }
 
@@ -144,7 +144,7 @@ main {
 }
 
 .info1 {
-    background-color: #e0e0e0;
+    background-color: #c3c3c3;
     height: 30rem;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -190,7 +190,7 @@ main {
 
 
 svg {
-    background-color: #e8e8e8; 
+    background-color: #637c7f; 
     display: block;
 }
 
@@ -224,9 +224,9 @@ svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e8e8e8;
+    background-color: #637c7f;
     font-size: 1.5rem;
-    color: #000000; 
+    color: #ffffff; 
 }
 
 .info3 p {
@@ -236,7 +236,7 @@ svg {
 .fa-arrow-down {
     font-size: 4rem;
     padding: 1rem;
-    color: #4ca8a1;
+    color: #ff004f;
     animation: bounce 1s infinite;
 }
   
@@ -254,7 +254,7 @@ svg {
 }
 
 .pimg {
-    background-color: #e8e8e8;
+    background-color: #637c7f;
     padding-top: 4rem;
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -262,6 +262,7 @@ svg {
     justify-content: center;
     align-content: center;
 }
+
 
 .pimg img {
     width: 100%;
@@ -304,7 +305,7 @@ svg {
 
 
 .info4 {
-    background-color: #e8e8e8;
+    background-color: #637c7f;
     padding: 4rem 1.05rem 2rem 1.05rem;
     display: flex;
 }
@@ -322,7 +323,7 @@ svg {
 }
   
 .info4 p {
-    color: #004D4D;
+    color: #ffffff;
     margin: 2.1rem;
     font-size: 1rem;
     text-align: justify;
@@ -457,35 +458,77 @@ svg {
 .info5 {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    background-color: #e8e8e8;
-    padding: 3rem 2rem;
+    align-items: center;
+    gap: 5rem;
+    background-color: #637c7f;
+    padding: 3rem;
 }
 
 .polyimg img {
     height: 18rem;
-    margin-left: 2rem;
+    will-change: transform, opacity; 
 }
 
 .pmatter {
-    flex-basis: 50%;
-    margin: 0 2rem;
+    flex-basis: 45%;
+    opacity: 0;
+    transform: translateX(10%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .pmatter h2 {
     color: #b13366;
     font-size: 2rem;
-    margin-top: -.2rem;
+    margin-top: 0;
 }
 
 .pmatter p {
     margin: 1rem 0;
-    color: #004D4D;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 600;
     text-align: justify;
-    line-height: 2;
-    padding-bottom: 1.4rem;
+    line-height: 1.8;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0); /* Ensure it aligns back properly */
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in-out;
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.active.fade-right {
+    animation: fade-right 1s ease-in-out;
+}
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(40%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .info6 {
@@ -495,7 +538,26 @@ svg {
     align-items: center;
     color: #000000;
     background-color: #e8e8e8;
+} 
+
+
+.active.fade-up {
+    animation: fade-up 1s ease-in-out;
 }
+
+@keyframes fade-up {
+    0% {
+        transform: translateY(50vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+
+
 
 .info6 h1 {
     margin: 2rem 0;
@@ -656,6 +718,7 @@ u {
 
 .links a:hover {
     color: #ff004f;
+    font-size: .95rem;
 }
 
 .lp {
@@ -685,7 +748,6 @@ u {
 
 .map img:hover {
     height: 7.1rem;
-    border: 1px solid #ff004f;
 }
 
 .social {
