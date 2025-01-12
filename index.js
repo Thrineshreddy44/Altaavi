@@ -79,12 +79,8 @@ rightButton.addEventListener('click', () => {
 autoScroll();
 
 
-
-
-
 // NEXT
 
-// Get elements 
 const nextButton = document.getElementById('nextButton');
 const info6Section = document.querySelector('.info6');
 const checkboxesSection = document.querySelector('.checkboxes');
@@ -96,38 +92,76 @@ const nextButton3 = document.getElementById('nextButton3');
 const udSection = document.querySelector('.ud');
 const backButton2 = document.getElementById('backButton2');
 
-// Event listener for "Next" button in .info6 section
 nextButton.addEventListener('click', () => {
     info6Section.style.display = 'none';
     checkboxesSection.style.display = 'block';
 });
 
-// Event listener for "Back" button in checkboxes section
 backButton.addEventListener('click', () => {
     info6Section.style.display = 'flex';
     checkboxesSection.style.display = 'none';
 });
 
-// Event listener for "Next" button in checkboxes section
 nextButton2.addEventListener('click', () => {
     checkboxesSection.style.display = 'none';
     detailsSection.style.display = 'flex';
 });
 
-// Event listener for "Back" button in details section
 backButton1.addEventListener('click', () => {
     detailsSection.style.display = 'none';
     checkboxesSection.style.display = 'block';
 });
 
-// Event listener for "Next" button in details section
+
 nextButton3.addEventListener('click', () => {
     detailsSection.style.display = 'none';
     udSection.style.display = 'flex';
 });
 
-// Event listener for "Back" button in ud section
 backButton2.addEventListener('click', () => {
     udSection.style.display = 'none';
     detailsSection.style.display = 'flex';
 });
+
+// Animaations
+  
+function reveal() {
+    const reveals = document.querySelectorAll(".reveal");
+    const windowHeight = window.innerHeight;
+    const elementVisible = 150;
+
+    reveals.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+
+            if (
+                element.classList.contains("polyimg") || 
+                element.classList.contains("commit") || 
+                element.classList.contains("icons") || 
+                element.classList.contains("almat")
+            ) {
+                element.classList.add("fade-left");
+            } else if (
+                element.tagName === "IMG" || 
+                element.classList.contains("pmatter") || 
+                element.classList.contains("add")
+            ) {
+                element.classList.add("fade-right");
+            } else if (
+                element.classList.contains("matter") || 
+                element.classList.contains("links") || 
+                element.classList.contains("legal") || element.classList.contains("pimg")
+            ) {
+                element.classList.add("fade-up");
+            }
+        } else {
+    
+            element.classList.remove("active", "fade-left", "fade-right", "fade-up");
+        }
+    });
+}
+
+window.addEventListener("scroll", reveal, { passive: true });
+
