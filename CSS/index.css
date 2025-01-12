@@ -1,7 +1,7 @@
 * {
-    font-family: 'Lora', serif, Verdana, Geneva, Tahoma;
-    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0;
+    margin: 0;
     text-decoration: none;
     scroll-behavior: smooth;
 }
@@ -36,6 +36,7 @@ body {
 /* Splash End */
 
 header {
+    margin: .5rem;
     background-color: #f4f4f4;
     height: 8rem;
     display: flex;
@@ -785,11 +786,11 @@ u {
 
 .about {
     padding: 4rem;
-    background-color: #e8e8e8;
+    background-color: #637c7f;
 }
 
 .about p {
-    color: #004D4D;
+    color: #ffffff;
     padding: 1rem;
     font-size: 1.2rem;
     text-align: justify;
@@ -837,7 +838,7 @@ u {
 
 /* MEP */
 .mep {
-    background-color:#e8e8e8;
+    background-color:#637c7f;
     padding: 2rem;
     display: flex;
     gap: 3rem;
@@ -853,7 +854,7 @@ u {
 }
 
 .mep p {
-    color: #004D4D;
+    color: #ffffff;
     font-size: 1rem;
     width: 80%;
     text-align: justify;
@@ -873,7 +874,7 @@ body {
 }
 
 .mepmat {
-    color: #004D4D;
+    color: #ffffff;
     font-size: 1rem;
     width: 100%;
     text-align: justify;
@@ -886,7 +887,7 @@ body {
 }
 
 .man {
-    background-color:#e8e8e8;
+    background-color:#637c7f;
     padding: 2rem;
     display: flex;
     text-align: justify;
@@ -902,9 +903,9 @@ body {
 
 .manm {
     line-height: 2;
-    margin-left: -17rem;
+    margin-left: -16rem;
     margin-top: 5rem;
-    color: #004D4D;
+    color: #ffffff;
 }
 
 .manimg img {
@@ -916,7 +917,7 @@ body {
 }
 
 .proj {
-    background-color: #e8e8e8;
+    background-color: #637c7f;
 }
 
 .siteimg {
@@ -941,19 +942,19 @@ body {
 }
 
 .proj p {
-    color: #000000;
+    color: #ffffff;
     font-size: 1rem;
     padding: 1rem 2rem;
 }
 
 .project-info {
     padding: 1rem;
-    color: #004D4D;
+    color: #ffffff;
     line-height: 2;
     width: 30rem;
     margin-left: 2rem;
     margin-top: 1.5rem;
-    border: 2px solid rgb(45, 45, 45);
+    border: 2px solid #ff004f;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1020,7 +1021,7 @@ body {
 
 .project-info span {
     font-weight: bold;
-    color: #7A8800;
+    color: #2C3A3D ;
     margin-right: 5px;
 }
 
