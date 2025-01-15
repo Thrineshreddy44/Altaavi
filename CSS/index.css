@@ -264,7 +264,7 @@ svg {
     grid-template-columns: repeat(3, auto);
     gap: .5rem;
     justify-content: center;
-    align-content: center;
+    align-content: center; 
 }
 
 
@@ -893,6 +893,7 @@ body {
 
 .man {
     background-color:#e8e8e8;
+    gap: 16rem;
     padding: 2rem;
     display: flex;
     text-align: justify;
@@ -900,6 +901,7 @@ body {
 
 .man h2 {
     padding: 1rem 0;
+    margin-left: 2rem;
     font-size: 1.8rem;
     color: #ff004f;
     font-weight: bold;
@@ -908,15 +910,14 @@ body {
 
 .manm {
     line-height: 2;
-    margin-left: -17rem;
+    margin-left: -33rem;
     margin-top: 5rem;
     color: #004D4D;
 }
 
 .manimg img {
-    width: 20rem;
+    width: 30rem;
     padding: 1rem;
-    margin-left: 30rem;
     display: flex;
     flex-direction: column;
 }
