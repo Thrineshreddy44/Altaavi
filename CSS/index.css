@@ -120,10 +120,16 @@ nav a:hover {
 }
 
 
-main {
-    background-color: #e8e8e8 ;
-    height: 100vh;
+.info {
+    margin-top: -9.1rem;
+    background-image: url('../Photos/back1.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100%; 
+    z-index: 10;
 }
+
 
 .info1 h2 {
     color: #ff004f;
@@ -132,7 +138,7 @@ main {
 }
 
 .info1 p {
-    color: #004D4D;
+    color: #ffffff;
     line-height: 1.8;
     font-weight: 600;
     padding: 0 1.5rem;
@@ -145,12 +151,12 @@ main {
 }
 
 .info1 {
-    background-color: #e0e0e0;
+    background-color: #727272c4;
     height: 30rem;
     overflow-y: scroll;
     scroll-behavior: smooth;
     flex-basis: 50%;
-    margin: 2rem 0 0 5rem;
+    margin: 12rem 0 0 5rem;
     border: 2px solid rgb(45, 45, 45);
     border-radius: 8px;
     box-shadow: 10px 15px 9px rgba(0, 0, 0, 0.5);
@@ -190,7 +196,8 @@ main {
 /* 360 */
 
 svg {
-    background-color: #e8e8e8; 
+    margin-top: 10rem;
+    background-color: transparent; 
     display: block;
 }
 
@@ -266,6 +273,7 @@ svg {
     height: 35rem;
     object-fit: cover;
     transition: transform 0.3s ease-in-out; 
+    border: 2px solid black;
 }
 
 .pimg img:hover {
@@ -403,6 +411,7 @@ svg {
 }
 
 .clientimg img {
+    border: 2px solid #ff004f;
     height: 8rem;
     width: auto;
 }
@@ -913,18 +922,19 @@ body {
 }
 
 .proj {
+    margin-left: 1rem;
     background-color: #e8e8e8;
 }
 
 .siteimg {
     display: flex;
-    gap: 10rem;
+    gap: 5rem;
 }
 
 .projimg img{
     display: flex;
     flex-direction: column;
-    width: 20rem;
+    width: 25.5rem;
     padding: 2rem;
 }
 
