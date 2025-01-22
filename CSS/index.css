@@ -122,7 +122,7 @@ nav a:hover {
 
 .info {
     margin-top: -9.1rem;
-    background-image: url('../Photos/back1.jpg');
+    background-image: url('../Photos/background.png');
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -791,6 +791,7 @@ u {
 
 .about {
     padding: 4rem;
+    margin-bottom: -5rem;
     background-color: #e8e8e8;
 }
 
@@ -808,6 +809,37 @@ u {
     color: #ff004f;
     font-weight: bold;
     position: relative;
+}
+
+.contact {
+    display: flex;
+    padding: 4rem;
+    margin-bottom: -5rem;
+    background-color: #e8e8e8;
+}
+
+.contact p {
+    color: #004D4D;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 2;
+}
+
+.contact h2 {
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #ff004f;
+    font-weight: bold;
+    position: relative;
+}
+
+.maps img{
+    width: 25rem;
+    margin-top: 5rem;
+    border: 2px solid #ff004f;
+    box-shadow: 12px 10px 15px black;
 }
 
 /* Form */
@@ -1031,3 +1063,4 @@ body {
     color: #7A8800;
     margin-right: 5px;
 }
+
