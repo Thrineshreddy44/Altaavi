@@ -835,7 +835,7 @@ u {
     position: relative;
 }
 
-.maps img{
+.maps img{  
     width: 25rem;
     margin-top: 5rem;
     border: 2px solid #ff004f;
@@ -967,8 +967,8 @@ body {
 .projimg img{
     display: flex;
     flex-direction: column;
-    width: 25.5rem;
-    padding: 2rem;
+    width: 90%;
+    padding: 1rem;
 }
 
 .proj h2 {
@@ -1063,4 +1063,3 @@ body {
     color: #7A8800;
     margin-right: 5px;
 }
-
