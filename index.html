@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!-- Splash Screen -->
+<!-- Splash Screen --> 
 
     <div id="splash-screen">
         <img src="Photos/ALTAAVI.png" alt="Logo" class="splash-logo">
@@ -18,28 +18,7 @@
 
 <!-- end -->
 
-<header>
-    <div class="logo">
-        <a href="index.html"><img src="Photos/ALTAAVI.png" alt="ALTAAVI"></a>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html" target="_self">HOME</a></li>
-            <li><a href="aboutus.html" target="_self">ABOUT US</a></li>
-            <li class="dropdown">
-                <a href="#" target="_self">BUSINESS DIVISIONS</a>
-                <ul class="dropdown-menu">
-                    <li><a href="MEP.html">MEP Sub Contract</a></li>
-                    <li><a href="manpower.html">Man Power Supply</a></li>
-                </ul>
-            </li>
-            <li><a href="project.html">PROJECTS</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
-            <li><a href="contact.html" target="_self">CONTACT</a></li>
-        </ul>
-    </nav>
-</header>
-
+<div id="header-placeholder"></div>
     
 
     <main class="info">
@@ -83,11 +62,10 @@
                 </text>
                 
                 <circle cx="150" cy="150" r="100" fill="#e2e2e29b" stroke="black" stroke-width="2"/>
-                <circle cx="150" cy="150" r="130" fill="transparent" stroke="black" stroke-width="2"/>
+                <circle cx="150" cy="150" r="140" fill="transparent" stroke="black" stroke-width="2"/>
                 
                 <image x="90" y="120" width="140" href="Photos/ALTAAVI.png" />
             </svg>
-            <video class="v1" src="Sequence-1.mp4" autoplay muted loop></video>
         </div>
         
     </main>
@@ -253,103 +231,107 @@
         </div>
     </section>
     
+    <section class="info6">
+        <div class="matter reveal">
+            <h1>Ready to work together</h1>
+            <p>If you have a project in mind and you’re looking for a reliable construction partner, we want to hear from you!</p>
+            <button id="nextButton">NEXT</button>
+        </div>
+    </section>
     
 
-    <footer>
-        <section class="info6">
-            <div class="matter reveal">
-                <h1>Ready to work together</h1>
-                <p>If you have a project in mind and you’re looking for a reliable construction partner, we want to hear from you!</p>
-                <button id="nextButton">NEXT</button>
+      <div class="check">
+        <div class="checkboxes" style="display: none;">
+            <p>Your Project Type</p> <br>
+            <span class="slt">Select all that apply</span> <br>
+            
+            <div class="checkbox-item">
+                <label for="checkbox1">Turnkey Projects</label>
+                <input type="checkbox" id="checkbox1">
             </div>
-        </section>
-        
-
-          <div class="check">
-            <div class="checkboxes" style="display: none;">
-                <p>Your Project Type</p> <br>
-                <span class="slt">Select all that apply</span> <br>
-                
-                <div class="checkbox-item">
-                    <label for="checkbox1">Turnkey Projects</label>
-                    <input type="checkbox" id="checkbox1">
-                </div>
-                
-                <div class="checkbox-item">
-                    <label for="checkbox2">Turnkey Design & Build Projects</label>
-                    <input type="checkbox" id="checkbox2">
-                </div>
-                
-                <div class="checkbox-item">
-                    <label for="checkbox3">Electro-mechanical Projects</label>
-                    <input type="checkbox" id="checkbox3">
-                </div>
-                
-                <div class="checkbox-item">
-                    <label for="checkbox4">Facade Projects</label>
-                    <input type="checkbox" id="checkbox4">
-                </div>
-                
-                <div class="checkbox-item">
-                    <label for="checkbox5">Steel Projects</label>
-                    <input type="checkbox" id="checkbox5">
-                </div>
-                
-                <div class="checkbox-item">
-                    <label for="checkbox6">Facility Management</label>
-                    <input type="checkbox" id="checkbox6">
-                </div>
-        
-                <div class="button-group">
-                    <button id="backButton">BACK</button>
-                    <button id="nextButton2">NEXT</button>
-                </div>
+            
+            <div class="checkbox-item">
+                <label for="checkbox2">Turnkey Design & Build Projects</label>
+                <input type="checkbox" id="checkbox2">
+            </div>
+            
+            <div class="checkbox-item">
+                <label for="checkbox3">Electro-mechanical Projects</label>
+                <input type="checkbox" id="checkbox3">
+            </div>
+            
+            <div class="checkbox-item">
+                <label for="checkbox4">Facade Projects</label>
+                <input type="checkbox" id="checkbox4">
+            </div>
+            
+            <div class="checkbox-item">
+                <label for="checkbox5">Steel Projects</label>
+                <input type="checkbox" id="checkbox5">
+            </div>
+            
+            <div class="checkbox-item">
+                <label for="checkbox6">Facility Management</label>
+                <input type="checkbox" id="checkbox6">
+            </div>
+    
+            <div class="button-group">
+                <button id="backButton">BACK</button>
+                <button id="nextButton2">NEXT</button>
             </div>
         </div>
-        
-        <div class="details" style="display: none;">
+    </div>
+    
+    <div class="details" style="display: none;">
+        <div>
+            <p>Your Project Details</p>
+            <textarea rows="8" name="" id=""></textarea>
+
+            <div class="button-group">
+                <button id="backButton1">BACK</button>
+                <button id="nextButton3">NEXT</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ud" style="display: none;">
+       
+        <form>
+            <p>Your Details</p>
             <div>
-                <p>Your Project Details</p>
-                <textarea rows="8" name="" id=""></textarea>
-
-                <div class="button-group">
-                    <button id="backButton1">BACK</button>
-                    <button id="nextButton3">NEXT</button>
-                </div>
+              <input type="text" id="name" placeholder="Name *" required>
             </div>
+
+            <div>
+              <input type="text" id="designation" placeholder="Designation *" required>
+            </div>
+
+            <div>
+              <input type="text" id="phone" placeholder="Phone Number *" required>
+            </div>
+
+            <div>
+              <input type="email" id="email" placeholder="Email *" required>
+            </div>
+
+            <div>
+              <input type="text" id="company" placeholder="Company *" required>
+            </div>
+
+            <div class="button-group">
+              <button id="backButton2" type="button">BACK</button>
+              <button id="nextButton3" type="submit">Send</button>
+            </div>
+          </form>
+    </div>
+
+    <div class="v1">
+        <div>
+            <video src="video.mp4" autoplay loop controls></video>
         </div>
-        
-        <div class="ud" style="display: none;">
-           
-            <form>
-                <p>Your Details</p>
-                <div>
-                  <input type="text" id="name" placeholder="Name *" required>
-                </div>
+    </div>
 
-                <div>
-                  <input type="text" id="designation" placeholder="Designation *" required>
-                </div>
-
-                <div>
-                  <input type="text" id="phone" placeholder="Phone Number *" required>
-                </div>
-
-                <div>
-                  <input type="email" id="email" placeholder="Email *" required>
-                </div>
-
-                <div>
-                  <input type="text" id="company" placeholder="Company *" required>
-                </div>
-
-                <div class="button-group">
-                  <button id="backButton2" type="button">BACK</button>
-                  <button id="nextButton3" type="submit">Send</button>
-                </div>
-              </form>
-        </div>
-          
+    <footer>    
 
         <div class="quick">
 
@@ -396,7 +378,6 @@
             </div>
         </div>
         
-    
         <div class="social">
           <a href="https://wa.me/message/GN7YZBEPWIVCK1"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="http://www.linkedin.com/in/altaavi-electromechanical-540126342"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -408,6 +389,5 @@
     </footer>
 
     <script src="index.js"></script>
-    </script>
 </body>
 </html>
