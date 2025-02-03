@@ -19,6 +19,27 @@ window.onload = function() {
     }
 };
 
+// Header
+
+document.addEventListener("scroll", function () {
+    let header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        header.style.borderRadius = "10rem";
+    } else {
+        header.style.borderRadius = "0";
+    }
+});
+
+// Header for all pages
+
+fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+
 
 // Scroll
 
