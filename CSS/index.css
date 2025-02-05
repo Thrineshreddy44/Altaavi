@@ -26,11 +26,39 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    overflow: hidden;
+}
+
+#center-line {
+    position: absolute;
+    width: 10rem;  
+    height: 2px;   
+    background-color: black;
+    opacity: 0;  
+    transition: opacity 0.5s ease-in-out;
 }
 
 .splash-logo {
-    width: 15rem; 
-    margin-top: -5rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#animated-text {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-top: 3.2rem;
+    margin-left: .5rem;
+    font-size: 3.5rem;
+    color: #008888;
+    font-weight: bold;
+    position: absolute;
+    transform: translateY(0);
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 /* Splash End */
@@ -711,7 +739,7 @@ u {
 }
 
 .quick {
-    background-color: #ff004f;
+    background-color: #008888;
     font-size: .9rem;
     display: flex;
     flex-direction: row;
