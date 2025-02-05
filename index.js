@@ -1,23 +1,83 @@
-window.onload = function() {
+// window.onload = function() {
     
-    if (!sessionStorage.getItem('splashShown')) {
-        setTimeout(function() {
-            document.getElementById("splash-screen").style.display = "none"; 
-            document.body.style.overflow = "auto"; 
-            const nav = document.querySelector('nav');
-            if (nav) nav.style.display = "flex";
-        }, 3000);
+//     if (!sessionStorage.getItem('splashShown')) {
+//         setTimeout(function() {
+//             document.getElementById("splash-screen").style.display = "none"; 
+//             document.body.style.overflow = "auto"; 
+//             const nav = document.querySelector('nav');
+//             if (nav) nav.style.display = "flex";
+//         }, 3000);
 
       
-        sessionStorage.setItem('splashShown', 'true');
-    } else {
+//         sessionStorage.setItem('splashShown', 'true');
+//     } else {
         
+//         document.getElementById("splash-screen").style.display = "none";
+//         document.body.style.overflow = "auto";
+//         const nav = document.querySelector('nav');
+//         if (nav) nav.style.display = "flex";
+//     }
+// };
+
+window.onload = function () {
+    if (!sessionStorage.getItem("splashShown")) {
+        const textContainer = document.getElementById("animated-text");
+        const logo = document.getElementById("logo");
+        const centerLine = document.getElementById("center-line");
+        const text = "ALTAAVI".split("");  // Split text into an array of letters
+        let index = 0;
+
+        function animateLetter() {
+            if (index < text.length) {
+                textContainer.textContent = text[index];  // Add one letter at a time
+                textContainer.style.opacity = "1";  // Make the letter visible
+
+                setTimeout(() => {
+                    textContainer.style.opacity = "0";  // Make the letter disappear
+                    setTimeout(() => {
+                        index++;  // Move to the next letter
+                        animateLetter();  // Start animation for the next letter
+                    }, 400);  // Delay before hiding the letter
+                }, 400);  // Time each letter stays visible
+            } else {
+                // After all letters are animated, make the full text visible
+                setTimeout(() => {
+                    textContainer.textContent = "ALTAAVI";  // Make the entire text visible
+                    textContainer.style.opacity = "1";  // Ensure full text is visible
+                    centerLine.style.opacity = "1";  // Show the line after text animation
+
+                    // Begin the opening animation for logo and text
+                    setTimeout(openAnimation, 500);  
+                }, 500);  // Delay before showing the full text
+            }
+        }
+
+        // Function for opening animation of logo and text
+        function openAnimation() {
+            logo.style.opacity = "1";  
+            logo.style.transform = "translateY(-60%)";  // Move logo up from the center
+            textContainer.style.opacity = "1";  // Ensure the full text is visible
+            textContainer.style.transform = "translateY(60%)";  // Move text down from center
+
+            setTimeout(() => {
+                document.getElementById("splash-screen").style.display = "none";  // Hide splash screen
+                document.body.style.overflow = "auto";  // Enable body scroll
+                const nav = document.querySelector("nav");
+                if (nav) nav.style.display = "flex";  // Show the navigation bar
+            }, 1000);  // Wait for animations to finish
+        }
+
+        animateLetter();  // Start the letter animation
+
+        sessionStorage.setItem("splashShown", "true");
+    } else {
         document.getElementById("splash-screen").style.display = "none";
         document.body.style.overflow = "auto";
-        const nav = document.querySelector('nav');
+        const nav = document.querySelector("nav");
         if (nav) nav.style.display = "flex";
     }
 };
+
 
 // Header
 
