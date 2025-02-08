@@ -1165,6 +1165,7 @@ u {
     .info4 {
         justify-content: center;
         align-items: center;
+        font-size: .6rem;
         flex-direction: column;
     }
 
