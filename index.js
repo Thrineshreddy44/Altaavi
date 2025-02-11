@@ -1,3 +1,5 @@
+
+
 // window.onload = function() {
     
 //     if (!sessionStorage.getItem('splashShown')) {
@@ -18,6 +20,27 @@
 //         if (nav) nav.style.display = "flex";
 //     }
 // };
+
+function toggleMenu() {
+    const nav = document.getElementById("nav-menu");
+    nav.classList.toggle("active");
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let sidemenu = document.querySelector(".nav-links"); 
+    let isMenuOpen = false; 
+
+    function toggleMenu() {
+        if (isMenuOpen) {
+            sidemenu.style.display = "none";
+        } else {
+            sidemenu.style.display = "block";
+        }
+        isMenuOpen = !isMenuOpen; 
+    }
+
+    document.querySelector(".fa-bars").onclick = toggleMenu;
+});
 
 window.onload = function () {
     if (!sessionStorage.getItem("splashShown")) {
@@ -84,12 +107,18 @@ window.onload = function () {
 document.addEventListener("scroll", function () {
     let header = document.querySelector("header");
 
-    if (window.scrollY > 50) {
-        header.style.borderRadius = "10rem";
+    if (window.innerWidth > 1024) { // Only for laptop screens
+        if (window.scrollY > 50) {
+            header.style.borderRadius = "10rem";
+        } else {
+            header.style.borderRadius = "0";
+        }
     } else {
-        header.style.borderRadius = "0";
+        header.style.borderRadius = "0"; // Ensure mobile screens always reset
     }
 });
+
+
 
 // Header for all pages
 
@@ -246,3 +275,21 @@ function reveal() {
 
 window.addEventListener("scroll", reveal, { passive: true });
 
+// --------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownBtn = document.querySelector(".dropdown-btn");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdownBtn.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents closing when clicking inside the menu
+        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+});
